@@ -1,0 +1,85 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: black;
+  color: #006d0f;
+  border: 1px solid #006d0f;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-areas:
+    "header header header"
+    "tekst tekst tekst"
+    "prompt prompt prompt"
+    "guess guess guess"
+    "starter starter starter"
+    "lower correct higher"
+    "result result result";
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 50px;
+  border: 1px solid #006d0f;
+  border-radius: 10px;
+  background-color: black;
+}
+
+button {
+  background-color: black;
+  color: #006d0f;
+  padding: 10px 20px;
+  margin: 10px;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 5px;
+  border: 1px solid #006d0f;
+}
+
+h1 {
+  grid-area: header;
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.instructions {
+  grid-area: tekst;
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+#guess {
+  grid-area: guess;
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.prompt {
+  grid-area: prompt;
+}
+
+#start {
+  grid-area: starter;
+}
+
+#lower {
+  grid-area: lower;
+}
+
+#correct {
+  grid-area: correct;
+}
+
+#higher {
+  grid-area: higher;
+}
+
+#result {
+  grid-area: result;
+}
